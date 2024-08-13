@@ -100,6 +100,10 @@ class Player(pygame.sprite.Sprite):
 
         self.animation_count += 1
 
+    def update(self):
+        self.rect = self.sprite.get_rect(topleft = (self.rect.x, self.rect.y))
+        self.mask = pygame.mask.from_surface(self.sprite)
+
     def draw(self, window):
         # pygame.draw.rect(window, self.COLOR, self.rect)
         # self.sprite = self.SPRITES["idle_" + self.direction][0]
