@@ -239,8 +239,8 @@ def handle_move(player, objects):
     keys = pygame.key.get_pressed()
     player.x_vel = 0
 
-    collide_left = handle_horizontal_collision(player, objects, -PLAYER_VEL * 2)
-    collide_right = handle_horizontal_collision(player, objects, PLAYER_VEL * 2)
+    collide_left = handle_horizontal_collision(player, objects, -PLAYER_VEL * 3)
+    collide_right = handle_horizontal_collision(player, objects, PLAYER_VEL * 3)
 
     if keys[pygame.K_LEFT] and not collide_left:
         player.move_left(PLAYER_VEL)
